@@ -4,6 +4,27 @@
 
 using namespace std;
 
+// create structure
+struct atm {
+    int balance;
+    string account_name;
+    string last_deposit_time;
+};
+
+int check_balance() {
+    atm balance_model;
+
+    // lets hard code the balance for now
+    balance_model.balance = 500;
+
+    // let's say for everytime you check the bal
+    // you get free 10$ as coupon for checks if its zero
+    if (balance_model.balance = 0) {
+        balance_model.balance += 10;
+    }
+    return balance_model.balance;
+}
+
 void show_menu(){
     cout << "******** Menu ********" << endl;
     cout << "1. Check balance" << endl ;
