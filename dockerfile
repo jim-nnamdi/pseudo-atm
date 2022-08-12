@@ -4,4 +4,4 @@ WORKDIR /app
 
 ADD . /app/  
 
-CMD [ "clang++ -std=c++17 atm.cpp -o atm" ]
+CMD [ "sh atm.sh" ]

@@ -1,0 +1,1 @@
+"clang++ -std=c++17 atm.cpp -o atm"
