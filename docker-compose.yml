@@ -1,0 +1,5 @@
+version: '3.8'
+
+services:
+  atm:
+    container_name: "base container for atm service"
