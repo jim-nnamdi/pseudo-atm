@@ -19,7 +19,7 @@ int check_balance() {
 
     // let's say for everytime you check the bal
     // you get free 10$ as coupon for checks if its zero
-    if (balance_model.balance = 0) {
+    if (balance_model.balance == 0) {
         balance_model.balance += 10;
     }
     return balance_model.balance;
@@ -68,6 +68,10 @@ int main(){
     show_menu();
     double account_balance = 500;
     int option;
+    cout << "select option: ";
+    cin >> option;
+    system("clear");
+
     do {
     switch (option)
     {
@@ -79,6 +83,7 @@ int main(){
         cout << "How much do you want to deposit" << endl;
         cin >> deposit_amount;
         account_balance += deposit_amount;
+        cout << "The total balance is now: "<< account_balance << endl;
         break;
     case 3: 
         double withdrawal_amount;
