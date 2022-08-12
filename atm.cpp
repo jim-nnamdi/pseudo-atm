@@ -6,7 +6,7 @@ using namespace std;
 
 // create structure
 struct atm {
-    int balance;
+    int balance = 500;
     string account_name;
     string last_deposit_time;
 };
@@ -35,6 +35,7 @@ int deposit_funds(int deposit_amount){
 
     // update the balance from deposit amount
     get_balance_from_user += deposit_amount;
+    cout << "You deposited: "<< deposit_amount << "and the remaining amount is " << get_balance_from_user << endl;
     return get_balance_from_user;
 }
 
@@ -52,6 +53,7 @@ int withdraw_money(int withdrawal_amount){
     }
 
     get_rem_balance -= withdrawal_amount;
+    cout << "You withdrew: "<< withdrawal_amount << "and the remaining amount is " << get_rem_balance << endl;
     return get_rem_balance;
 }
 
@@ -66,7 +68,6 @@ void show_menu(){
 
 int main(){
     show_menu();
-    double account_balance = 500;
     int option;
     cout << "select option: ";
     cin >> option;
@@ -76,21 +77,15 @@ int main(){
     switch (option)
     {
     case 1:
-        cout << "The balance of the account is :" << account_balance << endl;
+        check_balance();
         break;
     case 2:
-        double deposit_amount; 
-        cout << "How much do you want to deposit" << endl;
-        cin >> deposit_amount;
-        account_balance += deposit_amount;
-        cout << "The total balance is now: "<< account_balance << endl;
+        int deposit_amt;
+        deposit_funds(deposit_amt);
         break;
     case 3: 
-        double withdrawal_amount;
-        cout << "How much do you want to withdraw";
-        cin >> withdrawal_amount;
-        account_balance -= withdrawal_amount;
-        cout << "You withdrew: "<< withdrawal_amount << "and the remaining amount is " << account_balance << endl;
+        int withdrawal_amt;
+        withdraw_money(withdrawal_amt);
         break;
     default:
         break;
