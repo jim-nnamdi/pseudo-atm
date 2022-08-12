@@ -90,6 +90,7 @@ int main(){
         cout << "How much do you want to withdraw";
         cin >> withdrawal_amount;
         account_balance -= withdrawal_amount;
+        cout << "You withdrew: "<< withdrawal_amount << "and the remaining amount is " << account_balance << endl;
         break;
     default:
         break;
