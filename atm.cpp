@@ -25,6 +25,18 @@ int check_balance() {
     return balance_model.balance;
 }
 
+int deposit_funds(int deposit_amount){
+    atm user_atm_acc;
+
+    // get user balance from struct obj
+    int get_balance_from_user = user_atm_acc.balance;
+    cout << "deposit amount" << endl;
+    cin >> deposit_amount;
+
+    // update the balance from deposit amount
+    get_balance_from_user += deposit_amount;
+}
+
 void show_menu(){
     cout << "******** Menu ********" << endl;
     cout << "1. Check balance" << endl ;
