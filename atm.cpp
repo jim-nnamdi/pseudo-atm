@@ -35,6 +35,24 @@ int deposit_funds(int deposit_amount){
 
     // update the balance from deposit amount
     get_balance_from_user += deposit_amount;
+    return get_balance_from_user;
+}
+
+int withdraw_money(int withdrawal_amount){
+    atm user_atm_acc;
+
+    // get remaining balance
+    int get_rem_balance = user_atm_acc.balance;
+    cout << "how much withdrawal" << endl;
+    cin >> withdrawal_amount;
+
+    // check if there's enough balance
+    if (withdrawal_amount > get_rem_balance){
+        cout << "insufficient funds";
+    }
+
+    get_rem_balance -= withdrawal_amount;
+    return get_rem_balance;
 }
 
 void show_menu(){
