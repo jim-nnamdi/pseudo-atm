@@ -5,14 +5,12 @@
 using namespace std;
 
 // create structure
-struct atm {
+template<class T> struct atm {
     int balance = 500;
-    string account_name;
-    string last_deposit_time;
 };
 
 int check_balance() {
-    atm balance_model;
+    atm<int> balance_model;
 
     // lets hard code the balance for now
     balance_model.balance = 500;
@@ -26,7 +24,7 @@ int check_balance() {
 }
 
 int deposit_funds(int deposit_amount){
-    atm user_atm_acc;
+    atm<int> user_atm_acc;
 
     // get user balance from struct obj
     int get_balance_from_user = user_atm_acc.balance;
@@ -40,7 +38,7 @@ int deposit_funds(int deposit_amount){
 }
 
 int withdraw_money(int withdrawal_amount){
-    atm user_atm_acc;
+    atm<int> user_atm_acc;
 
     // get remaining balance
     int get_rem_balance = user_atm_acc.balance;
