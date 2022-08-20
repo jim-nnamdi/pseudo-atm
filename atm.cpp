@@ -4,6 +4,47 @@
 
 using namespace std;
 
+
+// lets assume that we have a system to 
+// detect a user's account from a myriad of acc nos in our systems
+template<typename T> T fishAccInsertionSort(T account_number[]) {
+    int len_of_accounts = len(account_number)
+    for (i = 0; i < len_of_accounts; i++){
+        for (j = i; j > 0; j -- ){
+            if account_number[j-1] > account_number[j]{
+                account_number[j-1], account_number[j] = account_number[j], account_number[j-1]
+            }
+        }
+    }
+}
+
+template<typename T> T fishAccSelectionSort(T account_number[]) {
+    int len_of_accounts = len(account_number)
+    for (i = 0; i < len_of_accounts; i++){
+        for (j = i + 1; j < len_of_accounts; j ++ ){
+            if account_number[i] > account_number[j]{
+                account_number[i], account_number[j] = account_number[j], account_number[i]
+            }
+        }
+    }
+}
+
+template<typename T> T fishAccBubbleSort(T account_number[]) {
+    int len_of_accounts = len(account_number);
+    sorted = false;
+    for(!sorted){
+        for (i = 0; i < len_of_accounts - 1; i++){
+            for (j = i; j > 0; j -- ){
+                if account_number[i] > account_number[j]{
+                    account_number[i], account_number[j] = account_number[j], account_number[i]
+                }
+            }
+        }
+    }
+}
+
+
+
 // create structure
 template<class T> struct atm {
     int balance = 500;
